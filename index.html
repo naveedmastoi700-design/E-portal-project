@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hospital</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            line-height: 1.2;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .cta-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 44px;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-section {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <section class="w-full bg-blue-500">
+        <div class="max-w-7xl mx-auto py-3 px-4">
+            <p class="text-white text-sm font-medium text-center">
+                Emergency call: (406) 555-0120
+            </p>
+        </div>
+    </section>
+    <header class="w-full bg-[#FFFFFF] shadow-md">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                    +
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-gray-800">GENERAL</h1>
+                    <p class="text-sm text-gray-500 -mt-1">HOSPITAL</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-10 text-gray-600 font-medium">
+                <a href="index.html" class="hover:text-blue-500">Home</a>
+                <a href="about.html" class="hover:text-blue-500">About Us</a>
+                <a href="services.html" class="hover:text-blue-500">Services</a>
+                <a href="contact.html" class="hover:text-blue-500">Contact</a>
+            </nav>
+            <a href="contact.html"
+                class="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+    <section class="relative h-[130vh] w-full bg-cover bg-center" style="background-image: url(./image/1.png);">
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto h-full px-6 flex flex-col justify-center">
+            <h1 class="text-white text-5xl md:text-6xl font-bold leading-tight max-w-3xl">
+                Transforming Lives Through<br />
+                Excellence in Healthcare
+            </h1>
+            <p class="text-gray-200 mt-6 max-w-2xl text-lg">
+                We are committed to providing exceptional patient care and
+                promoting wellness in our community.
+            </p>
+            <div class="mt-8">
+                <a href="#"
+                    class="inline-block bg-gray-500/80 text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-600 transition">
+                    <ul> Book An Appointment</ul>
+                </a>
+            </div>
+
+        </div>
+        <div class="absolute bottom-6 left-0 right-0 z-10">
+            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-white text-sm">
+                <div class="flex items-center gap-2">
+                    <span>📍</span>
+                    <p>1234 Washington Ave. Manchester, Kentucky 39495.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span>📞</span>
+                    <p>(406) 555-0121</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="border-2 border-gray-400 rounded-xl p-10 min-h-[360px] flex flex-col">
+                    <span class="block w-12 h-1.5 bg-blue-500 mb-8"></span>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-5">
+                        Find a Doctor
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-8 flex-grow">
+                        Discover exceptional healthcare professionals at General Hospital;
+                        access licensed physicians in various medical fields.
+                    </p>
+
+                    <a href="#" class="text-blue-600 font-semibold inline-flex items-center gap-3 text-lg">
+                        Doctor Schedule <span class="text-2xl">→</span>
+                    </a>
+                </div>
+                <div class="border-2 border-gray-400 rounded-xl p-10 min-h-[360px] flex flex-col">
+                    <span class="block w-12 h-1.5 bg-blue-500 mb-8"></span>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-5">
+                        Make an Appointment
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-8 flex-grow">
+                        Schedule an appointment with our top medical professionals at
+                        General Hospital through our online booking service.
+                    </p>
+
+                    <a href="#" class="text-blue-600 font-semibold inline-flex items-center gap-3 text-lg">
+                        Contact Us <span class="text-2xl">→</span>
+                    </a>
+                </div>
+                <div class="border-2 border-gray-400 rounded-xl p-10 min-h-[360px] flex flex-col">
+                    <span class="block w-12 h-1.5 bg-blue-500 mb-8"></span>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-5">
+                        Find a Condition
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-8 flex-grow">
+                        Explore a range of conditions with our comprehensive guide to
+                        common illnesses and injuries, available at General Hospital.
+                    </p>
+
+                    <a href="#" class="text-blue-600 font-semibold inline-flex items-center gap-3 text-lg">
+                        Need Help? <span class="text-2xl">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="bg-sky-50 py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <p class="uppercase tracking-widest text-gray-500 mb-4">
+                    About Us
+                </p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 max-w-4xl mx-auto leading-tight">
+                    We always delivers expertise and compassion in every interaction.
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="md:col-span-1">
+                    <img src="./image/2.png" alt="Hospital" class="rounded-2xl w-[105%] h-[520px] object-cover" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6 leading-snug">
+                        Experience exceptional medical care at the General Hospital, a luxury hotel
+                        designed to provide comfortable and personalized healthcare services to its guests.
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed text-lg mb-10">
+                        General Hospital is a luxury medical facility that provides top-notch medical
+                        care to its patients. With state-of-the-art technologies and experienced medical
+                        professionals, we ensure the highest standards of healthcare and patient satisfaction.
+                    </p>
+                    <a href="#" class="inline-block bg-blue-500 text-white px-10 py-4 rounded-xl font-semibold
+                 hover:bg-blue-600 transition">
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-sm tracking-widest uppercase">
+                    Primary Care
+                </p>
+                <h2 class="text-4xl font-bold mt-2">
+                    Medical Advancements
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./image/3.png" class="w-full h-72 object-cover" alt="Medical">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-10">
+                            Medical Advancements
+                        </h3>
+                        <button
+                            class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./image/4.png" class="w-full h-72 object-cover" alt="Counseling">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-10">
+                            Counseling
+                        </h3>
+
+                        <button
+                            class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./image/5.png" class="w-full h-72 object-cover" alt="Family Medicine">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-10">
+                            Family Medicine
+                        </h3>
+
+                        <button
+                            class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-500 min-h-[35vh] flex items-center px-10">
+
+        <div class="max-w-6xl w-full flex justify-between items-center">
+            <div class="text-white max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-semibold leading-snug">
+                    Take the first step towards better<br>
+                    health. Book your appointment now!
+                </h1>
+            </div>
+            <div class="ml-10">
+                <a href="#" class="border-2 border-white text-white px-5 py-2.5 rounded-md 
+               text-base font-medium 
+               hover:bg-white hover:text-black transition duration-300">
+                    Book An Appointment
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="bg-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-bold text-slate-800 mb-6">
+                    Why Choose Us
+                </h2>
+
+                <p class="text-lg text-gray-500 mb-12 max-w-xl">
+                    Id sed suspendisse massa elit morbi odio justo vitae pharetra.
+                    Sed nullam sit est scelerisque tincidunt pellentesque felis.
+                </p>
+                <div class="mb-10 pb-8 border-b">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-3">
+                        20+ years of services
+                    </h3>
+                    <p class="text-lg text-gray-500">
+                        General Hospital boasts over 20 years of exceptional healthcare
+                        services, making it a top choice in the industry.
+                    </p>
+                </div>
+                <div class="mb-10 pb-8 border-b">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-3">
+                        Leading healthcare provider
+                    </h3>
+                    <p class="text-lg text-gray-500">
+                        General Hospital - a leading healthcare provider delivering
+                        top-notch medical care.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-3">
+                        Patient-centric care
+                    </h3>
+                    <p class="text-lg text-gray-500">
+                        General Hospital - patient-centric care is at the core of our values.
+                    </p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="./image/6.png" alt="Lab Doctor" class="rounded-2xl w-full h-[600px] object-cover" />
+            </div>
+
+        </div>
+    </section>
+    <section class="bg-slate-50 py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <p class="uppercase tracking-widest text-sm text-gray-400 mb-2">
+                    Our Team
+                </p>
+                <h2 class="text-5xl font-bold text-slate-800">
+                    Meet Our Professionals
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <div class="bg-sky-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="./image/7.png" class="w-full h-[360px] object-cover" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800">Floyd Miles</h3>
+                    <p class="text-gray-500">Director of Operations</p>
+                </div>
+                <div>
+                    <div class="bg-sky-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="./image/8.png" class="w-full h-[360px] object-cover" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800">Jacob Jones</h3>
+                    <p class="text-gray-500">Medical or Health Services Manager</p>
+                </div>
+                <div>
+                    <div class="bg-sky-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="./image/9.png" class="w-full h-[360px] object-cover" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800">Courtney Henry</h3>
+                    <p class="text-gray-500">Assistant Admissions Director</p>
+                </div>
+                <div>
+                    <div class="bg-sky-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="./image/10.png" class="w-full h-[360px] object-cover" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800">Devon Lane</h3>
+                    <p class="text-gray-500">Medical Manager</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="bg-white py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-14">
+                <p class="uppercase tracking-widest text-sm text-gray-400 mb-2">
+                    Patient Stories
+                </p>
+                <h2 class="text-5xl font-bold text-slate-800">
+                    What Our Patient are Saying
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="border-2 border-gray-300 rounded-2xl p-10 min-h-[320px]">
+                    <div class="text-yellow-400 text-2xl mb-5">
+                        ★★★★☆
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Turpis gravida mauris neque phasellus ut praesent ullamcorper a amet.
+                        Consequat amet turpis vitae pretium viverra.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./image/11.png" class="w-12 h-12 rounded-full" alt="">
+                        <span class="font-semibold text-slate-700">Jessica</span>
+                    </div>
+                </div>
+                <div class="border-2 border-gray-300 rounded-2xl p-10 min-h-[320px]">
+                    <div class="text-yellow-400 text-2xl mb-5">
+                        ★★★★☆
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Scelerisque elementum ac ridiculus lacus neque suspendisse odio.
+                        Enim porta etiam ac purus commodo in posuere.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./image/12.png" class="w-12 h-12 rounded-full" alt="">
+                        <span class="font-semibold text-slate-700">Miguel</span>
+                    </div>
+                </div>
+                <div class="border-2 border-gray-300 rounded-2xl p-10 min-h-[320px]">
+                    <div class="text-yellow-400 text-2xl mb-5">
+                        ★★★★☆
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Platea non imperdiet fringilla nunc lacus congue mauris in vitae.
+                        Ullamcorper a amet consequat.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./image/13.png" class="w-12 h-12 rounded-full" alt="">
+                        <span class="font-semibold text-slate-700">Sophia</span>
+                    </div>
+                </div>
+                <div class="border-2 border-gray-300 rounded-2xl p-10 min-h-[320px]">
+                    <div class="text-yellow-400 text-2xl mb-5">
+                        ★★★★☆
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Vitae pretium viverra platea non imperdiet. Enim porta etiam ac purus
+                        commodo in posuere.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./image/14.png" class="w-12 h-12 rounded-full" alt="">
+                        <span class="font-semibold text-slate-700">Daniel</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="relative w-full h-[420px] flex items-center bg-gray-900 overflow-hidden">
+        <img src="./image/15.png" alt="Doctor"
+            class="absolute inset-x-0 top-0 w-full h-[300px] object-cover opacity-40" />
+        <div class="absolute inset-x-0 top-0 h-[300px] bg-gradient-to-r from-black/80 to-black/40"></div>
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-8 w-full flex flex-col lg:flex-row items-start justify-between gap-10">
+            <div class="text-white max-w-xl mt-36">
+                <h2 class="text-4xl font-bold mb-4">Need help?</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Id sed suspendisse massa elit morbi odio justo vitae pharetra.
+                    Sed nullam sit est scelerisque tincidunt pellentesque felis.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-10 text-white mt-36">
+
+                <div>
+                    <p class="text-sm text-gray-300 mb-2">For enquiries, please call</p>
+                    <p class="text-2xl font-bold">(406) 555-0120</p>
+                </div>
+
+                <div class="hidden md:block w-px bg-white/30"></div>
+
+                <div>
+                    <p class="text-sm text-gray-300 mb-2">For appointments</p>
+                    <p class="text-2xl font-bold">(406) 555-0120</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="bg-white border-t border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-600"></div>
+                    <h3 class="font-bold text-lg text-gray-800">GENERAL<br>HOSPITAL</h3>
+                </div>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    1234 Washington Ave. Manchester,<br>
+                    Kentucky 39495.
+                </p>
+
+                <p class="text-gray-700 font-medium">(406) 555-0120</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-800 mb-4 tracking-wide">
+                    PATIENT INFORMATION
+                </h4>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="hover:text-blue-600 cursor-pointer">Find a Doctor</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Health Library</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Clinical Trials</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Newsroom</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-800 mb-4 tracking-wide">
+                    RESEARCH & EDUCATION
+                </h4>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="hover:text-blue-600 cursor-pointer">School of Medicine</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Medical Education</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Research</li>
+                    <li class="hover:text-blue-600 cursor-pointer">School of Nursing</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-800 mb-4 tracking-wide">
+                    FOR HEALTH PROFESSIONALS
+                </h4>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="hover:text-blue-600 cursor-pointer">Transfer a patient</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Mount Sinai Connect</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Refer a Patient</li>
+                    <li class="hover:text-blue-600 cursor-pointer">Nursing</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="border-t border-gray-200 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between px-8 max-w-7xl mx-auto">
+            <p class="text-gray-500 text-sm">
+                © 2025 General Hospital
+            </p>
+
+            <a href="#" class="text-gray-500 hover:text-blue-600 text-sm">
+                Privacy Policy
+            </a>
+        </div>
+        <button
+            class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-md shadow-lg transition">
+            ↑
+        </button>
+    </footer>
+
+
+
+
+</body>
+
+</html>
