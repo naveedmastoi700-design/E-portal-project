@@ -58,6 +58,12 @@
             }
         }
     </style>
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+}
+</script>
 </head>
 
 <body>
@@ -68,31 +74,64 @@
             </p>
         </div>
     </section>
-    <header class="w-full bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-full bg-blue-600 flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">+</span>
-                </div>
-                <div>
-                    <h1 class="text-lg font-semibold text-slate-800 leading-tight">
-                        GENERAL
-                    </h1>
-                    <p class="text-sm text-slate-500 -mt-1">
-                        HOSPITAL
-                    </p>
-                </div>
+    <header class="w-full bg-[#FFFFFF] shadow-md relative z-50">
+
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                +
             </div>
-            <nav class="hidden md:flex items-center gap-12 text-slate-600 font-medium text-base">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="about.html" class="hover:text-blue-600 transition">About Us</a>
-                <a href="services.html" class="hover:text-blue-600 transition">Services</a>
-                <a href="contact.html" class="text-blue-600 font-semibold">Contact</a>
-            </nav>
-            
-            </a>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800">GENERAL</h1>
+                <p class="text-sm text-gray-500 -mt-1">HOSPITAL</p>
+            </div>
         </div>
-    </header>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex gap-8 text-gray-600 font-medium">
+            <a href="index.html" class="hover:text-blue-500">Home</a>
+            <a href="about.html" class="hover:text-blue-500">About Us</a>
+            <a href="services.html" class="hover:text-blue-500">Services</a>
+            <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        </nav>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-4">
+
+            <!-- Button -->
+            <a href="contact.html"
+                class="hidden md:block bg-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition">
+                Book Appointment
+            </a>
+
+            <!-- Mobile Button -->
+            <button onclick="toggleMenu()" class="md:hidden text-3xl">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+        class="absolute top-full left-0 w-full bg-white shadow-md hidden flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+
+        <a href="index.html" class="hover:text-blue-500">Home</a>
+        <a href="about.html" class="hover:text-blue-500">About Us</a>
+        <a href="services.html" class="hover:text-blue-500">Services</a>
+        <a href="contact.html" class="hover:text-blue-500">Contact</a>
+
+        <a href="contact.html"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg text-center hover:bg-blue-600">
+            Book Appointment
+        </a>
+
+    </div>
+
+</header>
     <section class="relative w-full min-h-[320px] md:min-h-[380px] overflow-hidden">
         <img src="./image/19.png" alt="Conditions We Treat"
             class="absolute inset-0 w-full h-full object-cover object-center" />
