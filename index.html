@@ -81,45 +81,64 @@
             </p>
         </div>
     </section>
-    <header class="w-full bg-[#FFFFFF] shadow-md">
-        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div
-                    class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
-                    +
-                </div>
-                <div>
-                    <h1 class="text-lg font-bold text-gray-800">GENERAL</h1>
-                    <p class="text-sm text-gray-500 -mt-1">HOSPITAL</p>
-                </div>
+    <header class="w-full bg-[#FFFFFF] shadow-md relative z-50">
+
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                +
             </div>
-           <button onclick="toggleMenu()" class="md:hidden text-2xl">
-    ☰
-  </button>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800">GENERAL</h1>
+                <p class="text-sm text-gray-500 -mt-1">HOSPITAL</p>
+            </div>
+        </div>
 
-  <!-- Desktop Menu -->
-  <nav class="hidden md:flex gap-10 text-gray-600 font-medium">
-    <a href="index.html" class="hover:text-blue-500">Home</a>
-    <a href="about.html" class="hover:text-blue-500">About Us</a>
-    <a href="services.html" class="hover:text-blue-500">Services</a>
-    <a href="contact.html" class="hover:text-blue-500">Contact</a>
-  </nav>
-            <!-- MOBILE MENU -->
-<div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 p-6 bg-white shadow-md">
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex gap-8 text-gray-600 font-medium">
+            <a href="index.html" class="hover:text-blue-500">Home</a>
+            <a href="about.html" class="hover:text-blue-500">About Us</a>
+            <a href="services.html" class="hover:text-blue-500">Services</a>
+            <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        </nav>
 
-  <a href="index.html" class="hover:text-blue-500">Home</a>
-  <a href="about.html" class="hover:text-blue-500">About Us</a>
-  <a href="services.html" class="hover:text-blue-500">Services</a>
-  <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        <!-- Right Side -->
+        <div class="flex items-center gap-4">
 
-</div>
-
+            <!-- Button -->
             <a href="contact.html"
-                class="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition">
+                class="hidden md:block bg-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition">
                 Book Appointment
             </a>
+
+            <!-- Mobile Button -->
+            <button onclick="toggleMenu()" class="md:hidden text-3xl">
+                ☰
+            </button>
+
         </div>
-    </header>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+        class="absolute top-full left-0 w-full bg-white shadow-md hidden flex flex-col gap-4 px-6 py-6 text-gray-700 font-medium">
+
+        <a href="index.html" class="hover:text-blue-500">Home</a>
+        <a href="about.html" class="hover:text-blue-500">About Us</a>
+        <a href="services.html" class="hover:text-blue-500">Services</a>
+        <a href="contact.html" class="hover:text-blue-500">Contact</a>
+
+        <a href="contact.html"
+            class="bg-blue-500 text-white px-5 py-2 rounded-lg text-center hover:bg-blue-600">
+            Book Appointment
+        </a>
+
+    </div>
+
+</header>
     <section class="relative h-[130vh] w-full bg-cover bg-center" style="background-image: url(./image/1.png);">
         <div class="absolute inset-0 bg-black/60"></div>
 
